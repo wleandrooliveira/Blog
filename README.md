@@ -22,6 +22,6 @@ Para testar a aplicação:
  
 8) rails db:migrate
 
-9) Para executar a aplicação execute o comando rails server. Após isso acesso http://localhost:3000.
+9) Para executar a aplicação execute o comando rails server. Após isso acesse http://localhost:3000.
 
 
