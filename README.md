@@ -1,25 +1,27 @@
 # Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projeto de um blog simples com a permissão para comentários por post.
 
-Things you may want to cover:
+Neste projeto foi utiliazdo ruby 2.5.1, rails 5.2.1.
 
-* Ruby version
+Para testar a aplicação:
 
-* System dependencies
+1) git clone https://github.com/wleandrooliveira/Blog.git
 
-* Configuration
+2) cd Blog
 
-* Database creation
+3) Blog\bundle install
 
-* Database initialization
+4) O projeto usar o como gerenciador de banco de dados o PostgreSQL, portando será necessário, instalar o PostgreSQL, caso não esteja instalado.
 
-* How to run the test suite
+5) Configure o usuário e senha do arquivo database.yml para o usuário do postgres da máquina.
 
-* Services (job queues, cache servers, search engines, etc.)
+6) Após a configuração do usuário e senha do postgres, execute os seguintes comandos abaixo:
 
-* Deployment instructions
+7) rails db:create
+ 
+8) rails db:migrate
 
-* ...
-# Blog
+9) Para executar a aplicação execute o comando rails server. Após isso acesso http://localhost:3000.
+
+
