@@ -2,7 +2,7 @@
 
 Projeto de um blog simples com a permissão para comentários por post.
 
-Neste projeto foi utiliazdo ruby 2.5.1, rails 5.2.1.
+Neste projeto foi utilizado ruby 2.5.1, rails 5.2.1.
 
 Para testar a aplicação:
 
