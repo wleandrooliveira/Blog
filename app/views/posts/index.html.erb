@@ -1,0 +1,36 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1>Posts</h1>
+  </div>
+  <div class="panel-body">
+      <%= link_to "Novo Post", new_post_path, class: 'btn btn-primary'%>
+      <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Título</th>
+                <th>Conteúdo</th>
+                <th>Ações </th>
+              </tr>
+            </thead>
+            <tbody>
+                <% @posts.each do |post| %>
+                  <tr>
+                    <td><%= post.id %></td>
+                    <td><%= post.title %></td>
+                    <td><%= post.content %></td>
+                    <td>
+                      <%= link_to 'Mostrar', post , class: 'btn btn-small btn-success' %>
+                      <%= link_to 'Editar', edit_post_path(post), class: 'btn btn-small btn-info' %>
+                      <%= link_to 'Excluir', post, method: :delete, class: 'btn btn-small btn-danger' %>
+                      <%= link_to "Comentário", new_comment_path, class: 'btn btn-primary'%>
+                    </td>
+                  </tr>
+                <% end %>
+            </tbody>
+        </table>
+      </div>
+   </div>
+</div>
+

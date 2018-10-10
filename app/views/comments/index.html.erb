@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1>Commentários</h1>
+  </div>
+  <div class="panel-body">
+      <%= link_to "Novo Comentário", new_comment_path, class: 'btn btn-primary'%>
+      <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Comentário</th>
+            <th>Post</th>
+            <th>Ações </th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @comments.each do |comment| %>
+            <tr>
+              <td><%= comment.content %></td>
+              <td><%= comment.post.title %></td>
+              <td>
+                  <%= link_to 'Mostrar', comment  , class: 'btn btn-small btn-success' %>
+                  <%= link_to 'Editar', edit_comment_path(comment), class: 'btn btn-small btn-info' %>
+                  <%= link_to 'Excluir', comment, method: :delete, class: 'btn btn-small btn-danger' %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      </div>
+   </div>
+</div>
